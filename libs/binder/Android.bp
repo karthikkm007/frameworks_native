@@ -15,7 +15,7 @@
 cc_library_headers {
     name: "libbinder_headers",
     export_include_dirs: ["include"],
-    vendor_available: true,
+    vendor: true,
     header_libs: [
         "libbase_headers",
         "libcutils_headers",
@@ -32,10 +32,7 @@ cc_library {
     name: "libbinder",
 
     // for vndbinder
-    vendor_available: true,
-    vndk: {
-        enabled: true,
-    },
+    vendor: true,
 
     srcs: [
         "AppOpsManager.cpp",
